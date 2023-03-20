@@ -1,0 +1,19 @@
+settings:
+    number_of_replicas: 0
+    number_of_shards: 1
+    refresh_interval: 60s
+mappings:
+    dynamic: false
+    properties:
+        id:
+            type: text
+        date:
+            type: date
+            index: true
+        chipId:
+            type: byte
+            index: true
+        eventType:
+            type: text
+            index: true
+            analyzer: english
